@@ -1,0 +1,6 @@
+INSERT Objednavka ; nazov[unique=true]; ; produkty ; poznamka ; zakaznik ;
+                  ; "nazov0"; produkt0,produkt1 ; "poznamka0"; zakaznik0;
+                  ; "nazov1"; produkt1 ; "poznamka1"; zakaznik1;
+                  ; "nazov2"; produkt2 ; "poznamka2"; zakaznik2;
+                  ; "nazov3"; produkt3 ; "poznamka3"; zakaznik3;
+                  ; "nazov4"; produkt4 ; "poznamka4"; zakaznik4;

@@ -1,0 +1,54 @@
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Dobrý deň,
+
+zadanie sa skladá z troch bodov, prvý bod je viac programátorsky, zvyšné dva sú viac analytické.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+1. bod: vytvoriť webovú aplikáciu bez frontendu iba formou endpointov v Java spring frameworku.
+
+Špecifikácia:
+
+    vytvárať/mazať nových userov, pričom user má login, email a heslo 
+    
+    user vie vytvárať a editovať produkty (číselník produktov), pričom produkt má názov, popis a cenu
+
+    user vie vytvárať objednávky, pričom objednávka obsahuje názov, popis a zoznam produktov, zľavu alebo prirádžku v percentuálnom vyjadrení
+
+    endpoint na získanie zoznamu objednávok s názvom, celkovou cenou a produktmi a menom usera, ktorý objednávku vytvoril
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+2. bod: XML
+
+vytvoriť xml biznis procesu obsluhy zákazníka v Drive-In v McDonalde. 
+
+Zápis biznis procesu vychádza zo špecifikácie 
+ 
+https://help.sap.com/viewer/d0224eca81e249cb821f2cdf45a82ace/1808/en-US/e546b34e839e4aeab6029726da35adf0.html
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+3. bod: IMPEX
+
+vytvoriť impex pomocou ktorého by sme do systému vložili objednávku 
+
+objednávka obsahuje:
+    názov
+    produkty
+    poznámku
+    zákazníka
+
+Prepoklad je, že ani zákazník a ani produkty v systéme neexistujú. 
+
+Špecifikácia formátu impexu sa nachádza na nasledujúcom odkaze
+https://help.sap.com/viewer/50c996852b32456c96d3161a95544cdb/1808/en-US/1c8f5bebdc6e434782ff0cfdb0ca1847.html
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Výsledkom bodov 2. a 3. je jeden xml súbor a jeden impex súbor. 
+Tieto súbory spoločne zo zdrojovým kódom z prvej úlohy je potrebné commitnúť do repozitára, 
+ktorý Vám bude poskytnutý na vyžiadanie po dokončení zadania.
+
+---------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<process xmlns="http://www.hybris.de/xsd/processdefinition" start="takeOrder" name="driveInSale">
+
+	<action id="takeOrder" bean="takeOrder">
+		<transition name="OK" to="giveOrderToKitchen"/>
+		<transition name="NOK" to="error"/>
+	</action>
+
+	<action id="giveOrderToKitchen" bean="giveOrderToKitchen">
+		<transition name="OK" to="waitPaymentMethod"/>
+		<transition name="NOK" to="error"/>
+	</action>
+
+	<wait id="waitPaymentMethod" then="error">
+		<case event="eventPaymentMethod">
+			<choice id="Cash_Payment" then="getCashPaymentFromCustomer"/>
+			<choice id="Card_Payment" then="getCardPaymentFromCustomer"/>
+		</case>
+	</wait>
+
+	<action id="getCashPaymentFromCustomer" bean="getCashPaymentFromCustomer">
+		<transition name="OK" to="waitForFood"/>
+		<transition name="NOK" to="error"/>
+	</action>
+	<action id="getCardPaymentFromCustomer" bean="getCardPaymentFromCustomer">
+		<transition name="OK" to="waitForFood"/>
+		<transition name="NOK" to="error"/>
+	</action>
+	
+	<wait id="waitForFood" then="giveFoodToCustomer">
+		<event>CookingSubprocess</event>
+	</wait>
+
+	<action id="giveFoodToCustomer" bean="giveFoodToCustomer">
+		<transition name="OK" to="success"/>
+		<transition name="NOK" to="error"/>
+	</action>
+
+	<end id="success" state="SUCCEEDED">Successfull sale.</end>
+	<end id="error" state="ERROR">All went wrong.</end>
+</process>
